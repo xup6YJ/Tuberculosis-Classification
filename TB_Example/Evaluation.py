@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jul  9 14:26:37 2021
-
-@author: Lin
-"""
-
 
 import Function as f
 import os

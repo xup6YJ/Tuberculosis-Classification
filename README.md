@@ -23,4 +23,4 @@ Usage
 The bootstrapping approach can be used as a situation lacking of data(images). By sampling images in training set into sub-training set and sub-validation set over and over to save training samples.
 
 # Evaluation
-The result is evaluated by commmon screening index like Sensitivity, Specificity ..etc, which Loading Rate index is calculated by predict positive/all the predict samples under the circumstance of no predict False Negative samples(c=0 in confusion matrix).
+The result is evaluated by common screening index like Sensitivity, Specificity ..etc, which Loading Rate index is calculated by predict positive/all the predict samples under the circumstance of no predict False Negative samples(c=0 in confusion matrix).

@@ -11,5 +11,8 @@ The 2 datasets are downloaded from National Institutes of Health(NIH) IRL:https:
 4. Code ["Evaluation.py"](https://github.com/xup6YJ/Tuberculosis-Classification/blob/main/TB_Example/Evaluation.py) concat and evaluate all the bootstrapping result.
 
 # Bootstrapping Approach
-The bootstrapping approach is a method using the model parameters which trained by last bootstrap of model as the initial parameters of a new bootstrap.
-(EX: The initial parameters of first bootstrap training model is the parameters of ResNet50, the initial parameters of the next bootstrap training model is based on the previous bootstrap of model.
+The bootstrapping approach is a method using the model parameters which trained by the previous bootstrap of model as the initial parameters of a new bootstrap.
+(EX: The initial parameters of first bootstrap training model is the parameters of ResNet50, the initial parameters of the second bootstrap training model is based on the first bootstrap of model.)
+
+# Evaluation
+The result is evaluated by commmon screening index like Sensitivity, Specificity ..etc, which Loading Rate index is calculated by predict positive/all the predict samples under the circumstance of no predict False Negative samples(c=0 in confusion matrix).

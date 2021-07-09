@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jul  6 19:18:48 2021
-
-@author: Lin
-"""
-
 
 #Train function
 

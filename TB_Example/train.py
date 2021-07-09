@@ -207,4 +207,4 @@ def bootstrap_main(bootstrap, epochs):
             
         predict_df.to_csv(predict_df_path, index = False)
 
-bootstrap_main(bootstrap = 1, epochs = 15)  #bootstrap = 1, epochs = 15 means no bootstrap model training for 15 epochs)
+bootstrap_main(bootstrap = 1, epochs = 15)  #bootstrap = 1, epochs = 15 means do not use bootstrap approach, training for 15 epochs)

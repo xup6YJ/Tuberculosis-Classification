@@ -2,7 +2,8 @@
 Deep Learning bootstrapping approach on National Institutes of Health TB X-ray images Classification
 
 # Data Resource
-The 2 datasets are downloaded from National Institutes of Health(NIH) IRL:https://lhncbc.nlm.nih.gov/LHC-publications/pubs/TuberculosisChestXrayImageDataSets.html
+The 2 datasets are downloaded from National Institutes of Health(NIH) 
+IRL:https://lhncbc.nlm.nih.gov/LHC-publications/pubs/TuberculosisChestXrayImageDataSets.html
 
 # Instructions
 1. Code ["File_preprocessing.py"](https://github.com/xup6YJ/Tuberculosis-Classification/blob/main/TB_Example/File_preprocessing.py) is used for data splitting(train/test).

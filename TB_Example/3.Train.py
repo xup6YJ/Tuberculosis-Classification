@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jul  6 16:14:49 2021
 
-@author: Lin
-"""
 import os
 import cv2
 import timeit

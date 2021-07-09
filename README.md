@@ -10,7 +10,7 @@ URL:https://lhncbc.nlm.nih.gov/LHC-publications/pubs/TuberculosisChestXrayImageD
 1. Code ["File_preprocessing.py"](https://github.com/xup6YJ/Tuberculosis-Classification/blob/main/TB_Example/File_preprocessing.py) is used for data splitting(train/test).
 2. Code ["Image_preprocessing.py"](https://github.com/xup6YJ/Tuberculosis-Classification/blob/main/TB_Example/Image_preprocessing.py) is used for customed image function(Crop middle/ Histogram equalization).
 3. Code ["train.py"](https://github.com/xup6YJ/Tuberculosis-Classification/blob/main/TB_Example/train.py) is for model training using Bootstrapping method.
-4. Code ["Evaluation.py"](https://github.com/xup6YJ/Tuberculosis-Classification/blob/main/TB_Example/Evaluation.py) concat and evaluate all the bootstrapping result.
+4. Code ["Evaluation.py"](https://github.com/xup6YJ/Tuberculosis-Classification/blob/main/TB_Example/Evaluation.py) is used for concating and evaluating all the bootstrapping results.
 
 # Bootstrapping Approach
 Interpretation

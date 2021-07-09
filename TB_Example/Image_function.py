@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jul  6 15:40:49 2021
-
-@author: Lin
-"""
 
 import cv2
 from keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array, array_to_img

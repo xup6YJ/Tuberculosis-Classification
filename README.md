@@ -1,2 +1,2 @@
 # Tuberculosis-Classification
-Deep Learning approach on National Institutes of Health TB X-ray images Classification
+Deep Learning bootstrapping approach on National Institutes of Health TB X-ray images Classification

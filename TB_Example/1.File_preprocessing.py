@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jul  6 13:58:26 2021
-
-@author: Lin
-"""
 
 import Function as f
 import os
@@ -18,7 +13,7 @@ path_TB = os.path.join(os.getcwd(), 'MergeTB')  #path to TB images
 nor_file = f.count_files(path_normal)
 tb_file = f.count_files(path_TB)
 
-# os.remove(path_abnormal + '/Thumbs.db')
+# os.remove(path_abnormal + '/Thumbs.db')  #Remove Thumbs.db if it occured
 
 #Build DataFrame
 df_normal = f.file2dataframe(files = nor_file, Label = 'Normal', path = path_normal)

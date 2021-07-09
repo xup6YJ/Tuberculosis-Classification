@@ -12,8 +12,8 @@ import pandas as pd
 from pandas import DataFrame, Series
 from sklearn.model_selection import train_test_split
 
-path_normal = 'D:/File_X/Graduate/TB/MergeNormal'
-path_TB = 'D:/File_X/Graduate/TB/MergeTB'  
+path_normal = os.path.join(os.getcwd(), 'MergeNormal') #path to normal images
+path_TB = os.path.join(os.getcwd(), 'MergeTB')  #path to TB images  
 
 nor_file = f.count_files(path_normal)
 tb_file = f.count_files(path_TB)

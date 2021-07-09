@@ -20,7 +20,7 @@ The bootstrapping approach is a method using the model parameters which trained 
 
 Usage
 ---
-The bootstrapping approach can be used as a situation lacking of data(images). By sampling images in training set into sub-training set and sub-validation set over and over to save training samples. If you do not want to use bootstrapping approach, input bootstrap = 1 at the last line of ["3.Train.py"](https://github.com/xup6YJ/Tuberculosis-Classification/blob/main/TB_Example/3.Train.py), you may train the model only by transfer learning.
+The bootstrapping approach can be used as a situation lacking of data(images). By sampling images in training set into sub-training set and sub-validation set over and over to save training samples. If you do not want to use bootstrapping approach, input bootstrap = 1 at the last line of ["3.Train.py"](https://github.com/xup6YJ/Tuberculosis-Classification/blob/main/TB_Example/3.Train.py), you may train the model only by transfer learning(ResNet50 is setted in the source code).
 
 # Evaluation
 The result is evaluated by common screening index like Sensitivity, Specificity ..etc, which Loading Rate index is calculated by predict positive/all the predict samples under the circumstance of no predict False Negative samples(c=0 in confusion matrix).

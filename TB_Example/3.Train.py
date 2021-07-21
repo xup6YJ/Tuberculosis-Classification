@@ -19,8 +19,8 @@ from tensorflow.keras import models, layers, optimizers
 import Train_function as TF
 
 #Train Dataframe
-train_path_normal = 'D:/File_X/Graduate/TB/Modeling/train/train_normal'  #correct path
-train_path_tb = 'D:/File_X/Graduate/TB/Modeling/train/train_tb'  #correct path
+train_path_normal = os.path.join(os.getcwd(), 'Modeling/train/train_normal')  #correct path
+train_path_tb = os.path.join(os.getcwd(), 'Modeling/train/train_tb')  #correct path
 
 nor_file = f.count_files(train_path_normal)
 tb_file = f.count_files(train_path_tb)
@@ -31,8 +31,8 @@ train_df = df_normal.append(df_tb)
 train_df
 
 #Test Dataframe
-predict_path_normal = 'D:/File_X/Graduate/TB/Modeling/test/test_normal'  #correct path
-predict_path_tb = 'D:/File_X/Graduate/TB/Modeling/test/test_tb'  #correct path
+predict_path_normal = os.path.join(os.getcwd(), 'Modeling/test/test_normal')  #correct path
+predict_path_tb = os.path.join(os.getcwd(), 'Modeling/test/test_tb')  #correct path
 
 nor_file = f.count_files(predict_path_normal)
 tb_file = f.count_files(predict_path_tb)

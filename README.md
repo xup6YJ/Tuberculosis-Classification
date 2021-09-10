@@ -6,6 +6,9 @@ The 2 datasets are downloaded from National Institutes of Health(NIH).
 
 URL:https://lhncbc.nlm.nih.gov/LHC-publications/pubs/TuberculosisChestXrayImageDataSets.html
 
+# Enviornment & Deep Learning Framework
+Python, Tensorflow 2.4.0
+
 # Instructions
 1. Code ["1.File_preprocessing.py"](https://github.com/xup6YJ/Tuberculosis-Classification/blob/main/TB_Example/1.File_preprocessing.py) is used for data splitting(train/test).
 2. Code ["2.Image_preprocessing.py"](https://github.com/xup6YJ/Tuberculosis-Classification/blob/main/TB_Example/2.Image_preprocessing.py) is used for customed image function(Crop middle/ Histogram equalization).

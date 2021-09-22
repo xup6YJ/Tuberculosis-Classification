@@ -1,8 +1,10 @@
 # NIH Tuberculosis-Classification
 Deep Learning bootstrapping approach on National Institutes of Health TB X-ray images Classification
 
-# Data Resource
+# Data Resource & Citation
 The 2 datasets are downloaded from National Institutes of Health(NIH).
+
+Jaeger, S., Candemir, S., Antani, S., Wáng, Y. X., Lu, P. X., & Thoma, G. (2014). Two public chest X-ray datasets for computer-aided screening of pulmonary diseases. Quantitative imaging in medicine and surgery, 4(6), 475–477. https://doi.org/10.3978/j.issn.2223-4292.2014.11.20
 
 URL:https://lhncbc.nlm.nih.gov/LHC-publications/pubs/TuberculosisChestXrayImageDataSets.html
 

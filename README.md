@@ -31,6 +31,11 @@ The bootstrapping approach can be used as a situation lacking of data(images). B
 The result is evaluated by common screening index like Sensitivity, Specificity ..etc, which Loading Rate index is calculated by predict positive/all the predict samples under the circumstance of no predict False Negative samples(c=0 in confusion matrix).
 
 # Graphical User Interface (GUI)
-We also build a GUI to interface the model in order to make this computer assisted diagnosis system into practice. This system allows inputting DICOM(dcm) and PNG X-ray image to predict the result. Using TKinter package(Python).
+We also build a GUI to interface the model in order to make this computer assisted diagnosis system into practice. This system allows inputting DICOM(dcm) and PNG X-ray image to predict the result. 
+
+Source Code: ["GUI.py"](https://github.com/xup6YJ/Tuberculosis-Classification/blob/main/GUI.py) used TKinter package(Python).
 
 The example GUI image is below.
+<p align="center">
+  <img src="Example image/MTBNET.png">
+</p>

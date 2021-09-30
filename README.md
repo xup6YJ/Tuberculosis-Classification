@@ -1,6 +1,8 @@
 # NIH Tuberculosis-Classification
 Deep Learning bootstrapping approach on National Institutes of Health TB X-ray images Classification
 
+Example Video on Youtube: https://www.youtube.com/watch?v=K9uPn5cVDvk&ab_channel=YJLin
+
 # Data Resource & Citation
 The 2 datasets are downloaded from National Institutes of Health(NIH).
 

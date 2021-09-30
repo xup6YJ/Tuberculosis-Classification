@@ -37,7 +37,7 @@ We also build a GUI to interface the model in order to make this computer assist
 
 Source Code: ["GUI.py"](https://github.com/xup6YJ/Tuberculosis-Classification/blob/main/GUI.py) used TKinter package(Python).
 
-The example GUI image is below.
+The example GUI image is as follows.
 <p align="center">
   <img src="Example image/MTBNET.png">
 </p>

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Jun  7 14:06:07 2021
-
 @author: Administrator
 """
 
@@ -131,7 +130,20 @@ def prediction():
     
     df_result['Result_Suspected'] = prob_pneumonia
     df_result['Result_TB'] = prob_tb
+
+    #Normal
+    conditions = [(df_result['Result_Suspected'] == 0) & (df_result['Result_TB'] == 0)]
+    choices = [1]
+    df_result['Result_Normal'] = np.select(conditions, choices, default=0)
+
+    #Choose only 1 abnormal from TB/ Suspect
+    conditions = [(df_result['Result_Suspected'] == 1) & (df_result['Result_TB'] == 1),
+                (df_result['Result_Suspected'] == 0) & (df_result['Result_TB'] == 0)]
+
+    choices = [0, 0]
+    df_result['Result_Suspected'] = np.select(conditions, choices, default=1)
     
+    #choose abnormal
     prob_result = []
     for i in range(len(df_result)):
         if df_result.Result_Suspected[i] + df_result.Result_TB[i] > 0:
@@ -154,37 +166,48 @@ def prediction():
     target_dir = path + '/target file'
     tb_dir = target_dir + '/TB'
     suspected_dir = target_dir + '/Suspected_TB'
+    normal_dir = target_dir + '/Normal'
+
     if not os.path.isdir(target_dir): os.mkdir(target_dir)
     if not os.path.isdir(tb_dir): os.mkdir(tb_dir)
     if not os.path.isdir(suspected_dir): os.mkdir(suspected_dir)
+    if not os.path.isdir(normal_dir): os.mkdir(normal_dir)
     
     #download CSV
     df_result.to_csv(os.path.join(target_dir, 'TB_result.csv'), index = True)
     msg.showinfo('Tip', 'Finished downloading')
     
-    #TB files convert
-    ab_file = df_result[df_result['Result'] == 'Abnormal']
-
-    for i in range(len(ab_file)):
+    #All files path convert
+    # ab_file = df_result[df_result['Result'] == 'Abnormal']
+    
+    for i in range(len(df_result)):
         
-        fname = ab_file['Filename'][i]
+        fname = df_result['Filename'][i]
         
-        if ab_file['Result_TB'][i] == 1:
-            TB_Prob = ab_file['TB_Prob'][i]
+        if df_result['Result_TB'][i] == 1:
+            TB_Prob = df_result['TB_Prob'][i]
             prob = round(TB_Prob, 3)
             src = fname
             pos = src.rfind('/')
             dst = tb_dir + '/' + str(prob) + src[pos+1:] #convert to tb_dir
             print(src, dst)
             shutil.copyfile(src, dst)
-        else:
-            Suspected_Prob = ab_file['Suspected_Prob'][i]
+        elif df_result['Result_Suspected'][i] == 1:
+            Suspected_Prob = df_result['Suspected_Prob'][i]
             prob = round(Suspected_Prob, 3)
             src = fname
             pos = src.rfind('/')
             dst = suspected_dir + '/' + str(prob) + src[pos+1:] #convert to suspected_dir
             print(src, dst)
             shutil.copyfile(src, dst)
+        else:
+            src = fname
+            pos = src.rfind('/')
+            dst = normal_dir + '/' + src[pos+1:] #convert to suspected_dir
+            print(src, dst)
+            shutil.copyfile(src, dst)
+
+
             
 def count_files(path):
     onlyfiles = next(os.walk(path))[2] #dir is your directory path as string
@@ -234,4 +257,3 @@ result_hd.place(bordermode=OUTSIDE, x=400, y=90)
 ########################################################################
 
 root.mainloop()
-

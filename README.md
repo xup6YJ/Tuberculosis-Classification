@@ -41,3 +41,6 @@ The example GUI image is as follows.
 <p align="center">
   <img src="Example image/MTBNET.png">
 </p>
+
+Pyinstaller:
+pyinstaller -F -w .\GUI.py --paths=" "

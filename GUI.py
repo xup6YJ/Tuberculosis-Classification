@@ -6,30 +6,26 @@ Created on Mon Jun  7 14:06:07 2021
 
 from tkinter import *
 import tkinter as tk
-from keras.preprocessing import image
-import numpy as np
-from keras.models import load_model
-# loading Python Imaging Library 
-from PIL import ImageTk, Image   
-# To get the dialog box to open when required  
-from tkinter import filedialog
-import cv2
-from tkinter import messagebox as msg
-import os
-import pydicom as dicom
-import matplotlib.pyplot as plt
 
-import pandas as pd
-from pydicom import dcmread
-from pydicom.data import get_testdata_file
-import numpy as np
-import png, os, pydicom
 import cv2
-import os
-import pydicom
 import glob
 import gdcm
+from keras.preprocessing import image
+from keras.models import load_model
+from tkinter import filedialog
+from tkinter import messagebox as msg
+import matplotlib.pyplot as plt
+import numpy as np
+import os
+import pydicom as dicom
+import pandas as pd
+import pydicom
+from pydicom import dcmread
+from pydicom.data import get_testdata_file
+from PIL import ImageTk, Image 
+import png
 import shutil
+
 from tensorflow.keras.models import load_model
 
 model = load_model('0403ResNet101-08-0.99186438.h5')
